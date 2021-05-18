@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Pegando valores do select com botão</h1>
+    <hr />
+    <select name="" id="select">
+      <option value="testefutebol" selected>Futebol</option>
+      <option value="2">Volei</option>
+      <option value="3">Natação</option>
+      <option value="4">Nascar</option>
+      <option value="5">Indy</option>
+      <option value="6">Formula1</option>
+    </select>
+    <button onclick="select()">Mostrar Resultado</button>
+    <input type="text" id="text" />
+  </body>
+
+  <script>
+    function select() {
+      var resultado = document.getElementById("select");
+      var displaytext = resultado.options[resultado.selectedIndex].value;
+      document.getElementById("text").value = displaytext;
+    }
+  </script>
+</html>
